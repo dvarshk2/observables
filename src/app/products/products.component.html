@@ -1,0 +1,19 @@
+<p>products works!</p>
+
+<div>
+    <p>observable is created using interval method , it returns observable</p>
+    console.log(interval(1000));// it returns Observable    
+</div>
+<p>
+    Here observable is created using interval() and it was not unsubscribed, it results in memory leak <br>
+    <strong>Memory Leak :</strong>When observable is subscribed, it emits data continuously, even we navigate to other view <br>
+    Available whole memory will be allocated to obs output, so after some time application will not works <br><br>
+    <strong><em><a routerLink="/unsubscribed">Click here to check Unsubscribed Product</a></em></strong><br>
+</p>
+<!-- <div class="code">  
+    ngOnInit(): void {
+        console.log(interval(1000));// it returns Observable
+        this.mySubscription = interval(1000)
+                                .subscribe(count => console.log(count))}
+    }
+</div> -->
